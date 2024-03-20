@@ -82,6 +82,22 @@
         "name": "StatCounts",
         "link": "https://www.youtube.com/watch?v=EW8UuhHfHUI"
       }
+    },
+    {
+      "time": "April 8, 2023",
+      "image": "./2023-04-08.1.png",
+      "credit": {
+        "name": "StatCounts",
+        "link": "https://www.youtube.com/watch?v=-2yrZ7MD7Zs"
+      }
+    },
+    {
+      "time": "April 8, 2023",
+      "image": "./2023-04-08.2.png",
+      "credit": {
+        "name": "StatCounts",
+        "link": "https://www.youtube.com/watch?v=-2yrZ7MD7Zs"
+      }
     }
   ]
 }
