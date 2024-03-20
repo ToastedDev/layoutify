@@ -1,5 +1,7 @@
+import defaultTheme from "tailwindcss/defaultTheme";
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: ["class"],
   content: ["./src/**/*.{astro,ts,tsx}"],
   prefix: "",
@@ -12,6 +14,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['"Geist Sans"', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
