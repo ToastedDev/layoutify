@@ -1,6 +1,10 @@
 ---
 import { Palette } from 'lucide-react';
 import Layout from '../layouts/Layout.astro';
+import LayoutCard from '../components/Layout.astro'
+import { getCollection } from 'astro:content';
+
+const layouts = await getCollection("layouts");
 ---
 
 <Layout title="Welcome to Astro.">
@@ -9,9 +13,12 @@ import Layout from '../layouts/Layout.astro';
       <h1 class="text-primary flex items-center justify-center gap-2 font-bold text-4xl tracking-tighter">
         <Palette className='w-14 h-14' />
         Layoutify
-      </h1>
+  </h1>
       <p class="text-sm text-foreground/60 mx-auto w-full max-w-sm">Look back at the stats community's old layouts. The <a href="https://archive.org" class="text-primary underline underline-offset-4">Wayback Machine</a> of the stats community.</p> 
     </div> 
+    <ul class="mt-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      {layouts.map((layout) => <LayoutCard layout={layout} />)}
+    </ul>
   </main>
 </Layout>
 
