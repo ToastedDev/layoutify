@@ -1,5 +1,5 @@
 ---
-import { Palette } from 'lucide-react';
+import { Palette, TriangleAlert } from 'lucide-react';
 import Layout from '../layouts/Layout.astro';
 import LayoutCard from '../components/Layout.astro'
 import { getCollection } from 'astro:content';
@@ -9,11 +9,18 @@ const layouts = await getCollection("layouts");
 
 <Layout title="Welcome to Astro.">
   <main class="flex flex-col p-4">
-    <div class="text-center flex flex-col gap-1">
+    <div class="text-center flex flex-col items-center justify-center gap-1">
+      <div class="text-center bg-yellow-500/30 px-2 py-1 rounded-lg border border-yellow-500 text-yellow-500 mb-3 mx-auto w-full max-w-lg flex flex-col items-center gap-2">
+        <div class="flex items-center gap-2">
+          <TriangleAlert className='w-8 h-8' />
+          <p class="text-xl font-bold tracking-tighter mt-1">Warning</p>
+        </div>
+        <p>This website is in a very WIP state. Not many layouts are currently included, but more will be added soon.</p> 
+      </div>
       <h1 class="text-primary flex items-center justify-center gap-2 font-bold text-4xl tracking-tighter">
         <Palette className='w-14 h-14' />
         Layoutify
-  </h1>
+      </h1>
       <p class="text-sm text-foreground/60 mx-auto w-full max-w-sm">Look back at the stats community's old layouts. The <a href="https://archive.org" class="text-primary underline underline-offset-4">Wayback Machine</a> of the stats community.</p> 
     </div> 
     <ul class="mt-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
