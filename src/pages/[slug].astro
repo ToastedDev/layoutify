@@ -13,7 +13,7 @@ export const getStaticPaths = async () => {
 const { entry } = Astro.props;
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title={entry.data.name}>
   <main class="flex flex-col p-4">
     <div class="text-center flex flex-col gap-1">
       <a href={entry.data.link}>
